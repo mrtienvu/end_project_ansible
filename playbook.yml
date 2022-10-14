@@ -1,4 +1,4 @@
-- hosts: testserver
+- hosts: all
   become: true
   tasks:
   - name: Install multiple package
