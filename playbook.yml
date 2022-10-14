@@ -8,10 +8,6 @@
      - docker
   - name: Start docker service
     service: name=docker state=started
-  - name: Clone a repo from github
-    git: repo=https://github.com/Sonal0409/AnsibleDockerdemo.git dest=/tmp/gitrepo
-  - name: Change directory to gitrepo and build the dockerfile
-    command: chdir=/tmp/gitrepo docker build -t myansibleimage .
-  - name: RUn the image to create a container
-    command: docker run -d -P myansibleimage
+  - name: Run the image to create a container
+    command: docker run -d -P mrtienvu/endprojectimage:latest
 
